@@ -43,8 +43,9 @@ export default function AnimationCup() {
                 className={styles.steam}
             />
             <Image 
-                src="/cup.jpg" 
-                alt="cup" width={78} 
+                src="/cup.png" 
+                alt="cup" 
+                width={78} 
                 height={75} 
                 className={styles.cupItem}
             />
