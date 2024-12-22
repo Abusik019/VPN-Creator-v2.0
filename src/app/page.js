@@ -62,7 +62,8 @@ export default function Home() {
     const handleButtonClick = (tariff) => {
         const updatedParams = new URLSearchParams(searchParams.toString());
         updatedParams.set("tariff", tariff);
-        router.push(`?${updatedParams.toString()}`);
+        const newUrl = `?${updatedParams.toString()}#calculator`;
+        router.push(newUrl, undefined, { shallow: true });
     };
 
     // Прокрутка страницы и удаление query параметров
@@ -444,7 +445,14 @@ export default function Home() {
                                 <h5>мес.</h5>
                             </div>
                         </div>
-                        <button>Приобрести</button>
+                        <button>
+                            <Link
+                                href="https://t.me/CreatorVPN_Bot"
+                                target="_blank"
+                            >
+                                Приобрести
+                            </Link>
+                        </button>
                     </div>
                 </ul>
             </section>
