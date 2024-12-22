@@ -1,0 +1,194 @@
+.navbar {
+    max-width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 40px;
+    box-sizing: border-box;
+
+    position: relative;
+
+    &>.title {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    &>.navLinks {
+        display: flex;
+        justify-content: space-between;
+
+        max-width: 475px;
+
+        gap: 30px;
+
+        &>li {
+            cursor: pointer;
+
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+
+            color: #000;
+
+            transition: color .3s ease-in-out;
+
+            &:hover {
+                color: #8FC0FF;
+            }
+        }
+    }
+
+    &>.headerTryBtn {
+        width: 113px;
+        height: 20px;
+
+        padding: 16px 24px;
+        box-sizing: content-box;
+
+        border-radius: 24px;
+        border: 1px solid #0D0A2C;
+
+        background-color: transparent;
+
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    &>.burgerMenu {
+        display: none;
+        cursor: pointer;
+
+        width: 42px;
+        height: 42px;
+
+        background-color: transparent;
+        border: none;
+
+        z-index: 1;
+
+        &:hover {
+            background-color: transparent !important;
+        }
+    }
+
+    &>.sideNav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 70vw;
+        background-color: white;
+        box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 65px 16px;
+        box-sizing: border-box;
+
+        transition: right 0.3s ease-in-out;
+
+        &>ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 24px;
+
+            width: 100%;
+
+            &>li {
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                cursor: pointer;
+
+                transition: color 0.3s ease-in-out;
+
+                &:hover {
+                    color: #8FC0FF;
+                }
+            }
+        }
+
+        &>.closeMenu{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+
+            cursor: pointer;
+    
+            width: 42px;
+            height: 42px;
+    
+            background-color: transparent;
+            border: none;
+    
+            z-index: 10000;
+    
+            &:hover {
+                background-color: transparent !important;
+            }
+        }
+
+        &>.tryBtn{
+            width: 147px;
+            height: 45px;
+
+            border-radius: 24px;
+            border: 1px solid #0D0A2C;
+
+            background-color: transparent;
+
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+
+            margin-top: 40px;
+        }
+    }
+
+    &>.sideNavOpen {
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 20px 16px;
+        box-sizing: border-box;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+    
+        width: 100vw;
+        height: 64px;
+
+        background-color: #fff;
+
+        z-index: 100000;
+
+        &>.navLinks,
+        &>.headerTryBtn {
+            display: none;
+        }
+
+        &>.burgerMenu {
+            display: block;
+        }
+    }
+}
