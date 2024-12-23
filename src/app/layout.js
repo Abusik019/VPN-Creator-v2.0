@@ -1,6 +1,5 @@
 import { Suspense } from "react";
 import "./globals.css";
-import { Preloader } from "./components/Preloader";
 
 export const metadata = {
     metadataBase: new URL("https://creator-vpn.net"), 
@@ -38,7 +37,7 @@ export default function RootLayout({ children }) {
                 />
             </head>
             <body>
-                <Suspense fallback={<Preloader />}>
+                <Suspense>
                     {children}
                 </Suspense>
             </body>
