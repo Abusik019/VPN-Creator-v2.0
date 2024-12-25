@@ -12,8 +12,8 @@ export const metadata = {
         images: [
             {
                 url: "/icon.png",
-                width: 1200,
-                height: 630,
+                width: 600,
+                height: 315,
                 alt: "Иконка сайта",
             },
         ],
