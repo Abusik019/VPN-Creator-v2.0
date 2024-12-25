@@ -26,6 +26,7 @@ export default function RootLayout({ children }) {
         <html lang='ru' suppressHydrationWarning>
             <head>
                 <link rel="icon" href="/icon.png" sizes="any" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta name="description" content={metadata.description} />
                 <meta property="og:title" content={metadata.openGraph.title} />
                 <meta property="og:description" content={metadata.openGraph.description} />
@@ -35,6 +36,7 @@ export default function RootLayout({ children }) {
                     property="og:image"
                     content={metadata.openGraph.images[0].url}
                 />
+                <title>{metadata.title}</title>
             </head>
             <body>
                 <Suspense>
