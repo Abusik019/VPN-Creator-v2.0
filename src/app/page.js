@@ -45,6 +45,16 @@ export default function Home() {
 
     const freeCost = calculatePrice(followers);
 
+    // Плавный прокрут перехода по якорным ссылкам
+    const handleSmoothScroll = (e) => {
+        e.preventDefault(); 
+        const targetId = e.currentTarget.getAttribute("href").substring(1); 
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: "smooth", block: "start"}); 
+        }
+    };
+
     useEffect(() => {
         setIsClient(true);
     }, []);
@@ -650,41 +660,41 @@ export default function Home() {
                         </li>
                         <li>Тарифы</li>
                         <li>
-                            <Link href="#tariffs">Бесплатный</Link>
+                            <Link href="#tariffs" onClick={handleSmoothScroll}>Бесплатный</Link>
                         </li>
                         <li>
-                            <Link href="#tariff-premium">Премиум</Link>
+                            <Link href="#tariff-premium" onClick={handleSmoothScroll}>Премиум</Link>
                         </li>
                         <li>
-                            <Link href="#calculator">Калькулятор прибыли</Link>
+                            <Link href="#calculator" onClick={handleSmoothScroll}>Калькулятор прибыли</Link>
                         </li>
                     </ul>
                     <ul className={styles.footerContentRight}>
                         <li>Q&A</li>
                         <li>
-                            <Link href="#questions">
+                            <Link href="#questions" onClick={handleSmoothScroll}>
                                 Сколько времени займёт настройка VPN?
                             </Link>
                         </li>
                         <li>
-                            <Link href="#questions">Как я получу прибыль?</Link>
+                            <Link href="#questions" onClick={handleSmoothScroll}>Как я получу прибыль?</Link>
                         </li>
                         <li>
-                            <Link href="#questions">
+                            <Link href="#questions" onClick={handleSmoothScroll}>
                                 Как быстро подписчики смогут подключиться
                                 к моему VPN?
                             </Link>
                         </li>
                         <li>
-                            <Link href="#questions">
+                            <Link href="#questions" onClick={handleSmoothScroll}>
                                 Что мои подписчики получат за эти деньги?
                             </Link>
                         </li>
                         <li>
-                            <Link href="#questions">Это законно?</Link>
+                            <Link href="#questions" onClick={handleSmoothScroll}>Это законно?</Link>
                         </li>
                         <li>
-                            <Link href="#questions">Как принимать платежи?</Link>
+                            <Link href="#questions" onClick={handleSmoothScroll}>Как принимать платежи?</Link>
                         </li>
                     </ul>
                 </div>
