@@ -31,7 +31,7 @@ export default function Navbar() {
                     <a href="#calculator" onClick={handleSmoothScroll}>Калькулятор прибыли</a>
                 </li>
                 <li>
-                    <a href="#questions" onClick={handleSmoothScroll}>Q&A</a>
+                    <a href="#questions" onClick={handleSmoothScroll}>FAQ</a>
                 </li>
             </ul>
             <button className={styles.headerTryBtn}>
@@ -95,7 +95,7 @@ export default function Navbar() {
                             onClick={(e) => {
                                 setIsOpen(false)
                                 handleSmoothScroll(e);
-                            }}>Q&A</Link>
+                            }}>FAQ</Link>
                     </li>
                 </ul>
                 <button className={styles.tryBtn}><Link href="https://t.me/CreatorVPN_Bot" target="_blank">Попробовать</Link></button>

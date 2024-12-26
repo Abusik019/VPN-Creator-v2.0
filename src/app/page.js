@@ -670,7 +670,7 @@ export default function Home() {
                         </li>
                     </ul>
                     <ul className={styles.footerContentRight}>
-                        <li>Q&A</li>
+                        <li>FAQ</li>
                         <li>
                             <Link href="#questions" onClick={handleSmoothScroll}>
                                 Сколько времени займёт настройка VPN?
