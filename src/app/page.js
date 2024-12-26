@@ -135,7 +135,7 @@ export default function Home() {
                                 </Link>
                             </button>
                             <button className={styles.btnCalculte}>
-                                <Link href="#calculator">Рассчитать прибыль</Link>
+                                <Link href="#calculator" onClick={handleSmoothScroll}>Рассчитать прибыль</Link>
                             </button>
                         </div>
                     </div>
@@ -598,7 +598,7 @@ export default function Home() {
                     <div className={styles.startNowTextBlock}>
                         <h2>Начните зарабатывать уже сегодня!</h2>
                         <h3>
-                            Превратите свою аудитория в источник стабильного
+                            Превратите свою аудиторию в источник стабильного
                             дохода, создайте свой VPN-бот всего за 5 минут.
                         </h3>
                         <button>
